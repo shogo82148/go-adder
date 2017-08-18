@@ -1,0 +1,44 @@
+consumes:
+- application/json
+- application/xml
+- application/gob
+- application/x-gob
+host: localhost:8080
+info:
+  description: goaで遊んでみるテスト
+  title: The adder API
+  version: ""
+paths:
+  /add/{left}/{right}:
+    get:
+      description: leftとrightを足した値をレスポンスボディーに入れて返します
+      operationId: operands#add
+      parameters:
+      - description: 左値
+        in: path
+        name: left
+        required: true
+        type: integer
+      - description: 右値
+        in: path
+        name: right
+        required: true
+        type: integer
+      produces:
+      - text/plain
+      responses:
+        "200":
+          description: OK
+      schemes:
+      - http
+      summary: add operands
+      tags:
+      - operands
+produces:
+- application/json
+- application/xml
+- application/gob
+- application/x-gob
+schemes:
+- http
+swagger: "2.0"
