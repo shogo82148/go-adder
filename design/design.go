@@ -22,4 +22,16 @@ var _ = Resource("operands", func() {
 		})
 		Response(OK, "text/plain")
 	})
+	Action("delete", func() {
+		Routing(DELETE(""))
+		Response(OK)
+	})
+	Action("put", func() {
+		Routing(PUT(""))
+		Response(OK)
+	})
+	Action("patch", func() {
+		Routing(PATCH(""))
+		Response(OK)
+	})
 })

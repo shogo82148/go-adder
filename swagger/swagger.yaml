@@ -9,6 +9,43 @@ info:
   title: The adder API
   version: ""
 paths:
+  /:
+    delete:
+      operationId: operands#delete
+      produces:
+      - text/plain
+      responses:
+        "200":
+          description: OK
+      schemes:
+      - http
+      summary: delete operands
+      tags:
+      - operands
+    patch:
+      operationId: operands#patch
+      produces:
+      - text/plain
+      responses:
+        "200":
+          description: OK
+      schemes:
+      - http
+      summary: patch operands
+      tags:
+      - operands
+    put:
+      operationId: operands#put
+      produces:
+      - text/plain
+      responses:
+        "200":
+          description: OK
+      schemes:
+      - http
+      summary: put operands
+      tags:
+      - operands
   /add/{left}/{right}:
     get:
       description: leftとrightを足した値をレスポンスボディーに入れて返します
@@ -39,6 +76,9 @@ produces:
 - application/xml
 - application/gob
 - application/x-gob
+responses:
+  OK:
+    description: OK
 schemes:
 - http
 swagger: "2.0"
